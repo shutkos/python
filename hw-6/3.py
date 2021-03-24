@@ -30,7 +30,7 @@ class Person:
 
     def set_birth_date(self, birth_date):
         if isinstance(birth_date, str):
-            self.birth_date = birth_date
+            self.birth_date = birth_date.lower()
         else:
             raise ValueError("Class is working with strings only")
 
