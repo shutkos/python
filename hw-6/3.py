@@ -20,19 +20,19 @@ class Person:
         if isinstance(first_name, str):
             self.first_name = first_name.lower()
         else:
-            raise ValueError("Class is working with strings only")
+            raise TypeError("Class is working with strings only")
 
     def set_last_name(self, last_name):
         if isinstance(last_name, str):
             self.last_name = last_name.lower()
         else:
-            raise ValueError("Class is working with strings only")
+            raise TypeError("Class is working with strings only")
 
     def set_birth_date(self, birth_date):
         if isinstance(birth_date, str):
             self.birth_date = birth_date.lower()
         else:
-            raise ValueError("Class is working with strings only")
+            raise TypeError("Class is working with strings only")
 
 
 class Student(Person):
@@ -45,13 +45,13 @@ class Student(Person):
         if isinstance(university, str):
             self.university = university.lower()
         else:
-            raise ValueError("Class is working with strings only")
+            raise TypeError("Class is working with strings only")
 
     def set_course(self, course):
         if isinstance(course, str):
             self.course = course.lower()
         else:
-            raise ValueError("Class is working with strings only")
+            raise TypeError("Class is working with strings only")
 
 
 class Teacher(Student):
@@ -63,4 +63,5 @@ class Teacher(Student):
         if isinstance(salary, str):
             self.salary = salary.lower()
         else:
-            raise ValueError("Class is working with strings only")
+            raise TypeError("Class is working with strings only")
+
