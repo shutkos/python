@@ -64,4 +64,3 @@ class Teacher(Student):
             self.salary = salary.lower()
         else:
             raise TypeError("Class is working with strings only")
-
