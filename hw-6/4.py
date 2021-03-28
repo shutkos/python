@@ -23,9 +23,7 @@ class SquareNums(ValidationMixin):
 
     def square_nums(self, list_int):
         if self.validate(list_int):
-            data = []
-            for i in list_int:
-                data.append(pow(i, 2))
+            data = [i ** 2 for i in list_int]
             return data
 
 
