@@ -3,19 +3,16 @@
 # приймає на вхід екземпляр класу Cat або Dog і виконує метод talk для вхідного параметра.
 
 class Animal:
-
     def talk(self):
         pass
 
 
 class Dog(Animal):
-
     def talk(self):
         print('woof woof')
 
 
 class Cat(Animal):
-
     def talk(self):
         print('meow')
 
