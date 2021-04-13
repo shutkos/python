@@ -10,9 +10,9 @@ class CustomException(Exception):
     def __init__(self, *args, file_log_msg='', **kwargs):
 
         if (file_log_msg == '') and (len(self.args) > 0):
-            file_log_msg = args[0]
+            msg = args[0]
             with open(self._file, 'a') as file:
-                file.write(file_log_msg + '\n')
+                file.write(msg + '\n')
                 file.close()
 
         if file_log_msg != '':
