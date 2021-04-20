@@ -7,9 +7,9 @@ class Fraction:
         self.den = den
 
     def __add__(self, other):
-        num = (self.num * other.den + self.den * other.num)
-        den = self.den * other.den
-        return Fraction(num, den)
+        new_num = (self.num * other.den + self.den * other.num)
+        new_den = self.den * other.den
+        return Fraction(new_num, new_den)
 
     def __sub__(self, other):
         new_num = self.num * other.den - self.den * other.num
@@ -17,14 +17,14 @@ class Fraction:
         return Fraction(new_num, new_den)
 
     def __mul__(self, other):
-        num = (self.num * other.den) * (self.den * other.num)
-        den = self.den * other.den
-        return Fraction(num, den)
+        new_num = self.num * other.num
+        new_den = self.den * other.den
+        return Fraction(new_num, new_den)
 
     def __truediv__(self, other):
-        num = (self.num * other.den) / (self.den * other.num)
-        den = self.den * other.den
-        return Fraction(num, den)
+        new_num = self.num / other.num
+        new_den = self.den / other.den
+        return Fraction(new_num, new_den)
 
     def __str__(self):
         return 'Fraction({}, {})'.format(self.num, self.den)
